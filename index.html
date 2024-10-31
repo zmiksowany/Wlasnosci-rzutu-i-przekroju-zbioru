@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Własności rzutu i przekroju</title>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Własności rzutu i przekroju</h1>
+
+    <h2>1. Podejście graficzne do własności Π<sub>A</sub>(C ∪ D) = Π<sub>A</sub>(C) ∪ Π<sub>A</sub>(D).</h2>
+    <p><em>Niech A, B będą dowolnymi zbiorami i niech C ⊂ A × B.</em></p>
+    <p>Gdy chcemy utworzyć rzut zbioru C∪D na zbiór A, bierzemy wszystkie elementy zbioru A, które trafiają do zbioru C∪D po tym jak "rzucimy jego cień" na ten zbiór.</p>
+    <p>Sumę rzutów C oraz D na zbiór A otrzymujemy poprzez osobno "rzucenie cienia" zbioru C i zbioru D na zbiór A, w ten sposób otrzymujemy dwa zbiory elementów ze zbioru A, ostatecznym wynikiem jest ich suma.</p>
+    <p>Poniższe rysunki obrazują tę sytuację:</p>
+
+    <!-- Miejsce na rysunki obok siebie -->
+    <div style="display: flex; justify-content: center;">
+        <img src="obrazek1.png" alt="Rysunek 1" style="width: 45%; margin-right: 5%;">
+        <img src="obrazek2.png" alt="Rysunek 2" style="width: 45%;">
+    </div>
+
+    <p>Jak widać, zbiory te są sobie równe.</p>
+
+    <h2>2. Podejście formalne do własności Π<sub>A</sub>(C ∪ D) = Π<sub>A</sub>(C) ∪ Π<sub>A</sub>(D).</h2>
+    <pre>
+        a ∈ Π<sub>A</sub>(C ∪ D) ⇔ (def. rzutu zbioru)
+        ∃b ∈ B : (a, b) ∈ C ∪ D ⇔ (def. sumy zbiorów)
+        ∃b ∈ B : ((a, b) ∈ C ∨ (a, b) ∈ D) ⇔ (prawo rozdzielności kwantyfikatorów)
+        (∃b ∈ B : (a, b) ∈ C) ∨ (∃b ∈ B : (a, b) ∈ D) ⇔ (def. rzutu zbioru)
+        a ∈ Π<sub>A</sub>(C) ∨ a ∈ Π<sub>A</sub>(D) ⇔ (def. sumy zbiorów)
+        a ∈ Π<sub>A</sub>(C) ∪ Π<sub>A</sub>(D)
+    </pre>
+
+    <h2>3. Pozostałe własności:</h2>
+    <p>Prawdziwe są też poniższe własności rzutu i przekroju:</p>
+    <blockquote>
+        Π<sub>A</sub>(C ∪ D) = Π<sub>A</sub>(C) ∪ Π<sub>A</sub>(D),<br>
+        Π<sub>A</sub>(C ∩ D) = Π<sub>A</sub>(C) ∩ Π<sub>A</sub>(D),<br>
+        Π<sub>B</sub>(C ∪ D) = Π<sub>B</sub>(C) ∪ Π<sub>B</sub>(D),<br>
+        Π<sub>B</sub>(C ∩ D) = Π<sub>B</sub>(C) ∩ Π<sub>B</sub>(D),<br>
+        (C ∪ D)<sub>a</sub> = C<sub>a</sub> ∪ D<sub>a</sub>,<br>
+        (C ∩ D)<sub>a</sub> = C<sub>a</sub> ∩ D<sub>a</sub>,<br>
+        (C ∪ D)<sub>b</sub> = C<sub>b</sub> ∪ D<sub>b</sub>,<br>
+        (C ∩ D)<sub>b</sub> = C<sub>b</sub> ∩ D<sub>b</sub>.
+    </blockquote>
+    <p>Rzuty sumy/iloczynu zbiorów są równe sumie/iloczynowi rzutów tych zbiorów z osobna (niezależnie czy mówimy o rzucie na pierwszą czy drugą współrzędną).</p>
+    <p>Przekroje sumy/iloczynu zbiorów są równe sumie/iloczynowi przekrojów tych rzutów z osobna (niezależnie czy mówimy o przekroju wzdłuż elementu należącego do pierwszego zbioru czy drugiego).</p>
+
+    <h2>4. Wniosek.</h2>
+    <p>Wszystkie powyższe formuły można obrazować na układzie tak jak na powyższych rysunkach (ad 1), a formalne dowody tych własności również przeprowadzane są jak powyżej (ad 2).</p>
+
+    <h2>5. Dodatek - wizualizacja przekroju.</h2>
+    <p><em>Niech A, B będą dowolnymi zbiorami i niech C ⊂ A × B.</em></p>
+    <p>Należy pamiętać, że przy wizualizacji przekroju zbioru przez element, mamy dosłownie na     myśli jeden pojedyńczy element należący do zbioru A albo B i przecinający nasz zbiór C, który potem "rzuca cień na odpowiednią współrzędną. Więc w przeciwieństwie do rzutu tutaj nie bierzemy zawsze całego "cienia"  zbioru.</p>
+    <!-- Miejsce na pojedynczy rysunek -->
+    <div style="display: flex; justify-content: center;">
+        <img src="obrazek3.png" alt="Rysunek 3" style="width: 45%; margin-right: 5%;">
+        <img src="obrazek4.png" alt="Rysunek 4" style="width: 45%;">
+    </div>
+
+
+</body>
+</html>
