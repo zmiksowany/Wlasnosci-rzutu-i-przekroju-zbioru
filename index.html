@@ -11,17 +11,18 @@
         }
         h1, h2 {
             margin-bottom: 10px;
+            text-align: center;
         }
         ul {
             list-style-type: none;
             padding-left: 0;
         }
-        .dot-bullet {
-            list-style-type: "• ";
+        .dot-bullet > li::before {
+            content: "• ";
         }
-        .dash-bullet {
+        .dash-bullet > li::before {
+            content: "- ";
             margin-left: 20px;
-            list-style-type: "- ";
         }
         .example {
             margin-top: 10px;
@@ -29,11 +30,24 @@
         .arrow {
             font-weight: bold;
         }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-left: 3px solid #ccc;
+            overflow-x: auto;
+        }
+        blockquote {
+            background-color: #f9f9f9;
+            border-left: 5px solid #ccc;
+            padding: 10px 20px;
+            margin: 10px 0;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
 
-    <h1 style="text-align: center;">Własności rzutu i przekroju</h1>
+    <h1>Własności rzutu i przekroju</h1>
 
     <h2>1. Podejście graficzne do własności Π<sub>A</sub>(C ∪ D) = Π<sub>A</sub>(C) ∪ Π<sub>A</sub>(D).</h2>
     <p><em>Niech A, B będą dowolnymi zbiorami i niech C ⊂ A × B.</em></p>
@@ -79,14 +93,12 @@
 
     <h2>5. Dodatek - wizualizacja przekroju.</h2>
     <p><em>Niech A, B będą dowolnymi zbiorami i niech C ⊂ A × B.</em></p>
-    <p>Należy pamiętać, że przy wizualizacji przekroju zbioru przez element, wychodzimy od jeden pojedyńczego elementu należącego do jednego ze zbiorów iloczynu kartezjańskiego, którym przecinamy nasz zbiór C, który następnie "rzuca cień" na odpowiednią współrzędną układu i ten "cień" jest naszym przekrojem. Więc w przeciwieństwie do rzutu tutaj nie bierzemy zawsze całego "cienia" rzucanego przez zbiór.  zbioru.</p>
-    <p>Przypomnijmy:<\p>
-    <!-- Miejsce na pojedynczy rysunek -->
+    <p>Należy pamiętać, że przy wizualizacji przekroju zbioru przez element, wychodzimy od jeden pojedyńczego elementu należącego do jednego ze zbiorów iloczynu kartezjańskiego, którym przecinamy nasz zbiór C, który następnie "rzuca cień" na odpowiednią współrzędną układu i ten "cień" jest naszym przekrojem. Więc w przeciwieństwie do rzutu tutaj nie bierzemy zawsze całego "cienia" rzucanego przez zbiór.</p>
+    <p>Przypomnijmy:</p>
     <div style="display: flex; justify-content: center;">
         <img src="obrazek3.png" alt="Rysunek 3" style="width: 45%; margin-right: 5%;">
         <img src="obrazek4.png" alt="Rysunek 4" style="width: 45%;">
     </div>
-
 
 </body>
 </html>
